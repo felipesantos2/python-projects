@@ -7,16 +7,17 @@ authors = [
 ]
 readme = "README.md"
 requires-python = ">=3.14"
+
 dependencies = [
     "rich (>=14.2.0,<15.0.0)",
-    "httpx (>=0.28.1,<0.29.0)"
-
+    "httpx (>=0.28.1,<0.29.0)",
+    "click (>=8.3.1,<9.0.0)",
+    "prettytable (>=3.17.0,<4.0.0)",
+    "dataset (>=1.6.2,<2.0.0)"
 ]
 
 licences="MIT"
-licences-file=[
-    
-]
+licences-file=[]
 
 [tool.poetry]
 package-mode=false
@@ -25,3 +26,24 @@ packages = [{include = "app_1", from = "src"}]
 [build-system]
 requires = ["poetry-core>=2.0.0,<3.0.0"]    
 build-backend = "poetry.core.masonry.api"
+
+[tool.poetry.scripts]
+sync = "app_1.task:sync"
+
+[dependency-groups]
+dev = [
+    "pytest (>=9.0.2,<10.0.0)",
+    "pytest-cov (>=7.0.0,<8.0.0)",
+    "blue (>=0.9.1,<0.10.0)",
+    "isort (>=7.0.0,<8.0.0)",
+    "stackprinter (>=0.2.12,<0.3.0)",
+    "fire (>=0.7.1,<0.8.0)",
+    "invoke (>=2.2.1,<3.0.0)",
+    "nox (>=2025.11.12,<2026.0.0)"
+]
+
+doc = [
+    "mkdocs-material (>=9.7.1,<10.0.0)",
+    "mkdocstrings (>=1.0.0,<2.0.0)",
+    "mkdocstrings-python (>=2.0.1,<3.0.0)"
+]
