@@ -1,0 +1,8 @@
+site_name: My First Doc
+repo_url: https://github.com/felipesantos2/python-projects
+repo_name: python-projects
+edit_uri: https://github.com/felipesantos2/python-projects/tree/main
+
+theme:
+  name: material
+  language: pt-BR
