@@ -1,0 +1,27 @@
+[project]
+name = "app-1"
+version = "0.1.0"
+description = ""
+authors = [
+    {name = "felipesantoa2",email = "you@example.com"}
+]
+readme = "README.md"
+requires-python = ">=3.14"
+dependencies = [
+    "rich (>=14.2.0,<15.0.0)",
+    "httpx (>=0.28.1,<0.29.0)"
+
+]
+
+licences="MIT"
+licences-file=[
+    
+]
+
+[tool.poetry]
+package-mode=false
+packages = [{include = "app_1", from = "src"}]
+
+[build-system]
+requires = ["poetry-core>=2.0.0,<3.0.0"]    
+build-backend = "poetry.core.masonry.api"
