@@ -2,17 +2,23 @@
 name = "conda"
 version = "0.1.0"
 description = ""
-authors = [
-    {name = "felipesantos2",email = "santospinheiro627@gmail.com"}
-]
+authors = [{ name = "felipesantos2", email = "santospinheiro627@gmail.com" }]
 readme = "README.md"
 requires-python = ">=3.14"
-dependencies = [
-]
+
+dependencies = ["rich (>=14.2.0,<15.0.0)", "httpx (>=0.28.1,<0.29.0)"]
 
 [tool.poetry]
-packages = [{include = "conda", from = "src"}]
+packages = [{ include = "conda", from = "src" }]
 
 [build-system]
 requires = ["poetry-core>=2.0.0,<3.0.0"]
 build-backend = "poetry.core.masonry.api"
+
+[dependency-groups]
+dev = ["pytest (>=9.0.2,<10.0.0)", "ruff (>=0.14.10,<0.15.0)"]
+
+
+[tool.ruff.format]
+# 5. Use single quotes in `ruff format`.
+quote-style = "single"
