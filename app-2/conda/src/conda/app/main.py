@@ -1,5 +1,8 @@
 def main() -> None:
-    print('olá mundo')
+    print('Olá, mundo!')
+
+def my_function() -> None:
+    print('Olá, mundo!')
 
 if __name__ == '__main__':
     main()
